@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>architecture</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>architecture</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-14 04:59:58</sys_created_on>
+        <sys_id>3e91f7362f1021100f965aab2799b6d4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>architecture</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sp_widget_3e91f7362f1021100f965aab2799b6d4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-14 05:02:50</sys_updated_on>
+        <template><![CDATA[<div class="slogan">
+ 
+  <div class ="image-box"> 
+    <img src ="https://dev104994.service-now.com/archictecture%20icon.png">
+  <div>
+    <div class ="content text-align=right">
+      <h1 class ="text-dark m-0 tittle">
+        <b>Architecture Governance Portal</b>
+      </h1>
+      <h3 class="text muted sub tittle">
+        Your gateway to a simplified,improved and automated architecture governance process.
+      </h3>
+    </div>
+ <style>
+    img{
+      float:left;
+    }
+  </style>    
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

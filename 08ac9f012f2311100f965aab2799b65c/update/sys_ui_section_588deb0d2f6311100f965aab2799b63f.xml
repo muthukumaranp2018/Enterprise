@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="ASA Override" section_id="588deb0d2f6311100f965aab2799b63f" sys_domain="global" table="x_936716_enterpris_governance_items" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_string_6</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-14 12:44:22</sys_created_on>
+            <sys_id>a792f5452f3751100f965aab2799b6d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="ASA Override" display_value="ASA Override" name="x_936716_enterpris_governance_items" sys_domain="global" view="Default view">588deb0d2f6311100f965aab2799b63f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-14 12:44:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_choice_18</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-14 12:44:22</sys_created_on>
+            <sys_id>2b92f5452f3751100f965aab2799b6d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="ASA Override" display_value="ASA Override" name="x_936716_enterpris_governance_items" sys_domain="global" view="Default view">588deb0d2f6311100f965aab2799b63f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-14 12:44:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_string_8</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-14 12:44:22</sys_created_on>
+            <sys_id>ab92f5452f3751100f965aab2799b6d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="ASA Override" display_value="ASA Override" name="x_936716_enterpris_governance_items" sys_domain="global" view="Default view">588deb0d2f6311100f965aab2799b63f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-14 12:44:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-14 12:44:22</sys_created_on>
+            <sys_id>2f92f5452f3751100f965aab2799b6d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="ASA Override" display_value="ASA Override" name="x_936716_enterpris_governance_items" sys_domain="global" view="Default view">588deb0d2f6311100f965aab2799b63f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-14 12:44:22</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_choice_9</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-14 12:44:22</sys_created_on>
+            <sys_id>af92f5452f3751100f965aab2799b6d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="ASA Override" display_value="ASA Override" name="x_936716_enterpris_governance_items" sys_domain="global" view="Default view">588deb0d2f6311100f965aab2799b63f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-14 12:44:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>ASA Override</caption>
+            <header>false</header>
+            <name>x_936716_enterpris_governance_items</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-02 11:25:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>588deb0d2f6311100f965aab2799b63f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_936716_enterpris_governance_items</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+            <sys_update_name>sys_ui_section_588deb0d2f6311100f965aab2799b63f</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-02 11:25:35</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>
