@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.complete_phase_hs</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>complete_phase_hs</name>
+        <script><![CDATA[var complete_phase_hs = Class.create();
+complete_phase_hs.prototype = {
+
+    club: function(number) {
+
+        var gr = new GlideRecord("x_936716_enterpris_engagement");
+        gr.addQuery('u_reference_2', number);
+        gr.query();
+//          if (a.next()) {
+//              if (a.u_choice_8 == '') {
+//                return false;
+//            }
+
+
+//          }
+		while(gr.next()){
+        var k = gr.getRowCount();
+        var kl = 0,
+            kv = 0;
+        var a = new GlideRecord("x_936716_enterpris_engagement");
+        a.addQuery('u_reference_2', number);
+        a.addQuery('u_choice_8=approved');
+        a.query();
+        while (a.next()) {
+            //if (a.u_choice_8 == 'approved' || a.u_choice_8 == 'not approved') {
+
+            kl++;
+            // }
+        }
+        var b = new GlideRecord("x_936716_enterpris_engagement");
+        b.addQuery('u_reference_2', number);
+        b.addQuery('u_choice_8=not approved');
+        b.query();
+        while (b.next()) {
+            //if (a.u_choice_8 == 'approved' || a.u_choice_8 == 'not approved') {
+            kv++;
+            // }
+
+        }
+
+
+        if (k == kl || k == kv) {
+            return true;
+        } else {
+            return false;
+        }
+		}
+
+    },
+	lock:function(kill){
+		 var gr = new GlideRecord("x_936716_enterpris_engagement");
+        gr.addQuery('u_reference_2', kill);
+        gr.query();
+//          if (a.next()) {
+//              if (a.u_choice_8 == '') {
+//                return false;
+//            }
+
+
+//          }
+		while(gr.next()){
+        var k = gr.getRowCount();
+        var kl = 0,
+            kv = 0;
+        var a = new GlideRecord("x_936716_enterpris_engagement");
+        a.addQuery('u_reference_2', kill);
+        a.addQuery('u_choice_8=approved');
+        a.query();
+        while (a.next()) {
+            //if (a.u_choice_8 == 'approved' || a.u_choice_8 == 'not approved') {
+
+            kl++;
+            // }
+        }
+        var b = new GlideRecord("x_936716_enterpris_engagement");
+        b.addQuery('u_reference_2', kill);
+        b.addQuery('u_choice_8=not approved');
+        b.query();
+        while (b.next()) {
+            //if (a.u_choice_8 == 'approved' || a.u_choice_8 == 'not approved') {
+            kv++;
+            // }
+
+        }
+
+
+        if (k != kl && k != kv) {
+            return true;
+        } else {
+            return false;
+        }
+		}
+    }
+	,
+
+    type: 'complete_phase_hs'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-25 12:29:14</sys_created_on>
+        <sys_id>9321c26e2f28a510c4c0d0ccf699b6a8</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>complete_phase_hs</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_9321c26e2f28a510c4c0d0ccf699b6a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-31 06:30:10</sys_updated_on>
+    </sys_script_include>
+</record_update>

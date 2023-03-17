@@ -15,19 +15,19 @@
 				image:'x_936716_enterpris.h3.png',
 		                
 				//location:'https://dev104994.service-now.com/sp?id=my_gv',
-				location:'sp?id=my_gv1&table=x_875887_enterpris_governance_items',
+				location:'sp?id=my_gv&table=x_936716_enterpris_governance_items',
 			label:'   My Governance Item        '
 			
 		},
 			{
 				image:'x_936716_enterpris.h5.png',
-			location:'/sp?id=sc_cat_item&sys_id=3842eb9997231110997874400153afb7                     ',
+			location:'sp?id=my_ar&table=x_936716_enterpris_engagement&part=u_reference_1                     ',
 			label:   '   My Reviews             '
 			
 		},
 			{
 				image:'x_936716_enterpris.h5.png',
-			location:'/sp?id=sc_cat_item&sys_id=3842eb9997231110997874400153afb7                      ',
+			location:'  sp?id=my_ar&table=x_936716_enterpris_engagement&part=u_reference_11                     ',
 			label:   '   My Approvals           '
 			
 		}
@@ -42,6 +42,9 @@
     color:#404040;
   width:100%;
     font-size:10rem;
+}
+.container{
+  width:80%
 }
 </css>
         <data_table>sp_instance</data_table>
@@ -63,19 +66,21 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-14 05:03:32</sys_created_on>
         <sys_id>4f627f762f1021100f965aab2799b6f7</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>architecture 2</sys_name>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>sp_widget_4f627f762f1021100f965aab2799b6f7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-01-14 05:41:34</sys_updated_on>
-        <template><![CDATA[<div class = "nav-btn-links">
-     
-  <div class ="link-wrapper" ng-repeat ="link in c.links" ng-include="'button-link'">
+        <sys_updated_on>2023-02-01 11:34:23</sys_updated_on>
+        <template><![CDATA[<div class="container md-5 border">
+    <div class = "nav-btn-links">   
+     <div class ="link-wrapper" ng-repeat ="link in c.links" ng-include="'button-link'">
     
   </div>
-</div>]]></template>
+  </div>
+</div>
+]]></template>
     </sp_widget>
 </record_update>

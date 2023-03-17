@@ -2,7 +2,6 @@
     <sc_cat_item_producer action="INSERT_OR_UPDATE">
         <access_type>restricted</access_type>
         <active>true</active>
-        <additional_review>false</additional_review>
         <allow_edit>false</allow_edit>
         <availability>on_desktop</availability>
         <billable>false</billable>
@@ -10,7 +9,6 @@
         <category display_value="Services">109f0438c6112276003ae8ac13e7009d</category>
         <checked_out/>
         <cost>0</cost>
-        <create_universal_request>false</create_universal_request>
         <custom_cart/>
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
@@ -96,36 +94,87 @@ if (rose.next()) {
     rose.sad_short_description = producer.sad_short_description;
     rose.update();
     if (producer.attach_document) {
-        var attach = new global.insattach();
-        attach.attach(producer.attach_document, producer.number);
+        var bus = new global.insattach();
+        bus.attach(producer.attach_document, producer.number);
     }
-    if (producer.attach_other_documents) {
-        var addattach = new global.attachsad();
-        addattach.sad(producer.attach_other_documents, producer.number, true, producer.sad_short_description, producer.engagement_group);
-        //addattach.u_string_1=producer.sad_short_description;
-    }
+}
+// start
 
-    var aac = new GlideRecord("x_936716_enterpris_governance_items");
-    var test = [];
-    test = producer.engagement_group.toString();
-    var test1 = [];
-    test1 = test.split(',');
-    var Length = test1.length;
-    for (var i = 0; i < Length; i++) {
+ 
 
-        var output = test1[i];
-        var test3 = new GlideRecord('x_936716_enterpris_engagement');
-        test3.initialize();
-        test3.engagement_group = test1[i];
-        //     test3.short_description = current.short_description;
-        //     test3.description = current.description;
-        test3.number = producer.number;
-        // test3.assignment_group = output[i];
-        test3.insert();
-    }
-    current.setAbortAction(true);
-}]]></script>
-        <short_description/>
+//end
+
+if (producer.attach_other_documents) {
+    var addattach = new global.attachsad();
+    addattach.sad(producer.attach_other_documents, producer.number, true, producer.sad_short_description, producer.engagement_group);
+    //addattach.u_string_1=producer.sad_short_description;
+	//addattach.u_reference_1 =producer.number;
+	
+}
+
+if(producer.u_choice_10 =='true'){  //star
+    rose.status = 'sad uploaded (ready review)';
+    rose.setValue('status','sad uploaded (ready review)');
+	gs.addInfoMessage('Sad uploaded ready for review');
+    rose.update();
+
+var y = new GlideRecord('x_936716_enterpris_sad_document');
+ y.addQuery('u_reference_1', producer.number);
+y.query();
+if(y.next()){
+	var sad_id = y.getValue('sys_id').toString();
+	//var sad_ap = y.getValue('sys_id').toString();
+}
+
+//Start 
+// var gr = new GlideRecord("x_936716_enterpris_sad_document");
+// gr.addQuery("u_reference_1", producer.number);
+// gr.query();
+// if (gr.next()) {
+
+//     var pp = gr.getValue('sys_id');
+//     rose.setValue('status', 'sad uploaded(ready for review)');
+//     //a.status ='sad uploaded(ready for review)';
+//     rose.update();
+//     if (u_choice_5 == 'Choice 1') {
+//         gr.u_choice_5 = 'expired';
+//         gr.setValue('u_choice_5', 'expired');
+//         gr.update();
+//     }
+// }
+// end
+
+//if (producer.engagement_group) {
+//var aac = new GlideRecord("x_936716_enterpris_governance_items");
+if(producer.engagement_group != 0){
+		//var aac = new GlideRecord("x_936716_enterpris_governance_items");
+var test = [];
+test = producer.engagement_group.toString();
+
+var test4 = test.split(',');
+var Len = test4.length;
+for (var i = 0; i < Len; i++) {
+
+    var output = test4[i];
+    var test3 = new GlideRecord('x_936716_enterpris_engagement');
+    test3.initialize();
+	//test3.u_reference_4 = sad_id;
+     //test3.engagement_group = test1[i];  
+  // test3.u_reference_2 = producer.number;      
+ //  test3.insert();
+
+    var cool = new global.ar_group(); // Script include call function
+  cool.lucky(test3.sys_id, output, producer.number,sad_id);
+
+   //test3.insert();     
+}
+}
+}
+current.setAbortAction(true);
+producer.portal_redirect="/sp?id=form&table=x_936716_enterpris_governance_items&sys_id="+rose.sys_id;
+	
+]]></script>
+        <short_description>ASA Submitted</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -133,14 +182,14 @@ if (rose.next()) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-05 10:10:00</sys_created_on>
         <sys_id>44c83a462f2bd1100f965aab2799b655</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>141</sys_mod_count>
         <sys_name>Update Governance Item</sys_name>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>sc_cat_item_producer_44c83a462f2bd1100f965aab2799b655</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-21 03:50:48</sys_updated_on>
+        <sys_updated_on>2023-02-16 16:58:08</sys_updated_on>
         <table_name>x_936716_enterpris_governance_items</table_name>
         <taxonomy_topic/>
         <template/>

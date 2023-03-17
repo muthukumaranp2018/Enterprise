@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_936716_enterpris.submite_checklist</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>submite_checklist</name>
+        <script><![CDATA[var submite_checklist = Class.create();
+submite_checklist.prototype = {	
+	
+	master: function(number){
+		
+		var gr = new GlideRecord("x_936716_enterpris_engagement");
+        gr.addQuery('u_reference_2', number);
+        gr.query();
+//          if (a.next()) {
+//              if (a.u_choice_8 == '') {
+//                return false;
+//            }
+
+
+//          }
+        var k = gr.getRowCount();
+        var kl = 0,
+            kv = 0;
+        var a = new GlideRecord("x_936716_enterpris_engagement");
+        a.addQuery('u_reference_2', number);
+        a.addQuery('u_choice_8=approved');
+        a.query();
+        while (a.next()) {
+            //if (a.u_choice_8 == 'approved' || a.u_choice_8 == 'not approved') {
+
+            kl++;
+            // }
+        }
+        var b = new GlideRecord("x_936716_enterpris_engagement");
+        b.addQuery('u_reference_2', number);
+        b.addQuery('u_choice_8=not approved');
+        b.query();
+        while (b.next()) {
+            //if (a.u_choice_8 == 'approved' || a.u_choice_8 == 'not approved') {
+            kv++;
+            // }
+
+        }
+
+
+        if (kl== kv) {
+            return true;
+        } else {
+            return false;
+        }
+
+    
+
+//         var a = new GlideRecord("x_936716_enterpris_engagement");
+//         a.addQuery('u_reference_2', number);
+//         //a.addQuery('u_choice_8INnot approved,approved');
+//         a.query();
+//         while (a.next()) {
+//             if (a.u_choice_8 == 'approved' || a.u_choice_8 == 'not approved') {
+
+//             return true;
+//              }
+//         }
+//         return false;
+		   
+		   
+// 		   master: function(number) {
+//          var a = new GlideRecord("x_936716_enterpris_engagement");
+//          a.addQuery('u_reference_2', number);
+//          a.query();
+//          if (a.next()) {
+//              if ((a.u_choice_8 == 'approved' || a.u_choice_8 == 'not approved') || (a.u_choice_8 == 'approved' || a.u_choice_8 == 'Choice 3') || (a.u_choice_8 == 'not approved' || a.u_choice_8 == 'Choice 3')) {
+//                  return true;
+//              }
+
+
+//          }
+    },
+
+    type: 'submite_checklist'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-26 09:57:11</sys_created_on>
+        <sys_id>8648663a2f242110c4c0d0ccf699b67e</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>submite_checklist</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_8648663a2f242110c4c0d0ccf699b67e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-31 06:08:13</sys_updated_on>
+    </sys_script_include>
+</record_update>

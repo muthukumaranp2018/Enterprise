@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.engagement_group</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>engagement_group</name>
+        <script><![CDATA[var engagement_group = Class.create();
+engagement_group.prototype = {
+    lock: function(number0, test1, number1, sd, sa) {
+        var life = new GlideRecord('sys_user_group');
+        life.addQuery('parent', test1);
+        life.addEncodedQuery('nameLIKEApprovers');
+        life.query();
+        if (life.next()) {
+            var car = new GlideRecord("x_936716_enterpris_engagement");
+            car.addQuery('number', number0);
+            car.u_reference_11 = life.sys_id;
+            car.u_reference_2 = number1;
+			car.u_reference_4 = sd;
+			car.u_reference_5 = sa;
+            car.update();
+        }
+        var blue = new GlideRecord('sys_user_group');
+        blue.addQuery('parent', test1);
+        blue.addEncodedQuery('nameLIKEReviewers');
+        blue.query();
+        if (blue.next()) {
+            car.u_reference_1 = blue.sys_id;
+            //car.u_reference_2 = number1;
+            car.update();
+        }
+    },
+
+    type: 'engagement_group'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-19 13:22:26</sys_created_on>
+        <sys_id>d15457642f28e110c4c0d0ccf699b6eb</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>engagement_group</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_d15457642f28e110c4c0d0ccf699b6eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-03 05:43:37</sys_updated_on>
+    </sys_script_include>
+</record_update>

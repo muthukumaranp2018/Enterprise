@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.eng_mandatory</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>eng_mandatory</name>
+        <script><![CDATA[var eng_mandatory = Class.create();
+eng_mandatory.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    eng: function() {
+    var a = this.getParameter('sysparm_number');
+		var b = new GlideRecord('x_936716_enterpris_sad_document');
+		b.addQuery('u_reference_1',a);
+		b.query();
+		if(b.next()){
+			return "true";
+		}
+		return "false";
+    },
+    type: 'eng_mandatory'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-16 13:11:26</sys_created_on>
+        <sys_id>eb5e17212fc1e910c4c0d0ccf699b65a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>eng_mandatory</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_eb5e17212fc1e910c4c0d0ccf699b65a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-16 16:51:42</sys_updated_on>
+    </sys_script_include>
+</record_update>

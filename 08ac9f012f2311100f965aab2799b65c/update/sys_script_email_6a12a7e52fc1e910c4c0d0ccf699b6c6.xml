@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>email comments</name>
+        <new_lines_to_html>true</new_lines_to_html>
+        <script><![CDATA[(function runMailScript( /* GlideRecord */ current, /* TemplatePrinter */ template,
+    /* Optional EmailOutbound */
+    email, /* Optional GlideRecord */ email_action,
+    /* Optional GlideRecord */
+    event) {
+	
+	
+	
+	
+	var a =event.parm2;
+	template.print(a);
+	
+	
+//     var abc = current.getValue('u_string_full_utf8_1');
+//     var users = current.u_glide_list_6.users;
+//     var usersplit = users.split(',');
+//     var userRec = new GlideRecord('sys_user');
+//     userRec.addQuery('sys_id', usersplit[i]);
+//     userRec.query();
+//     while (userRec.next()) {
+//         template.print(userRec.first_name);
+// 		current.u_string_full_utf8_1 =='abc';
+//     }
+    var userList = current.u_glide_list_6.list_collector.toString().split(',');
+    for (var i = 0; i < userList.length; i++) {
+        gs.eventQueue('x_936716_enterpris.Email comments', current, userList[i], '');
+		
+    }
+	
+
+
+
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-16 13:27:15</sys_created_on>
+        <sys_id>6a12a7e52fc1e910c4c0d0ccf699b6c6</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>email comments</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_email_6a12a7e52fc1e910c4c0d0ccf699b6c6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-17 10:29:59</sys_updated_on>
+    </sys_script_email>
+</record_update>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.invite_hs</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>invite_hs</name>
+        <script><![CDATA[var invite_hs = Class.create();
+invite_hs.prototype = {
+      arb: function(numb) {
+        var ab = new GlideRecord("x_936716_enterpris_engagement");
+        ab.addQuery('u_reference_2', numb);
+        ab.addQuery('type','arb');
+        ab.query();
+        if (ab.next()) {
+            if (ab.u_choice_8 == 'choice 4') {
+                return true;
+            }
+			
+        }
+    },
+
+    caf: function(num) {
+        var a = new GlideRecord("x_936716_enterpris_engagement");
+        a.addQuery('u_reference_2', num);
+        a.addQuery('type','caf');
+        a.query();
+        if (a.next()) {
+            if (a.u_choice_8 == 'choice 4' || a.u_choice_8 == 'review in progress') {
+                return true;
+            }
+        }
+    },
+	
+
+    type: 'invite_hs'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-25 10:03:30</sys_created_on>
+        <sys_id>137f51ea2fa4a510c4c0d0ccf699b692</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>invite_hs</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_137f51ea2fa4a510c4c0d0ccf699b692</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 12:22:41</sys_updated_on>
+    </sys_script_include>
+</record_update>

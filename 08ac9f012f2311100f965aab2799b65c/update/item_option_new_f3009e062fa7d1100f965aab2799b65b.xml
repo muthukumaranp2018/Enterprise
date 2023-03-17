@@ -35,13 +35,12 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>u_choice_6</name>
         <order>80</order>
-        <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
@@ -75,14 +74,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-05 07:15:22</sys_created_on>
         <sys_id>f3009e062fa7d1100f965aab2799b65b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Statement 2:- New Components,Integrations and Dependencies</sys_name>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>item_option_new_f3009e062fa7d1100f965aab2799b65b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-05 09:07:52</sys_updated_on>
+        <sys_updated_on>2023-02-06 12:44:40</sys_updated_on>
         <table/>
         <tooltip/>
         <type>5</type>

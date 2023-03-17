@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_936716_enterpris.c2_sad_status</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>c2_sad_status</name>
+        <script><![CDATA[var c2_sad_status = Class.create();
+c2_sad_status.prototype = {
+    sad_status: function(number) {
+       // if (current.u_choice_8 == 'approved') {
+			
+		 var water = new GlideRecord('x_936716_enterpris_engagement');
+        water.addQuery('u_reference_2', number);
+        water.query();
+		if(u_choice_8 == 'approved'){
+			var rose = new GlideRecord('x_936716_enterpris_sad_document');
+        rose.addQuery('u_reference_1',number);
+        rose.query();
+        while (rose.next()) {
+            rose.u_choice_5 = 'approved';
+            rose.update();
+        
+		}if(u_choice_8 == 'not approved'){
+			rose.u_choice_5 = 'not approved';
+            rose.update();
+		}
+		}
+//             var water = new GlideRecord('x_936716_enterpris_sad_document');
+//             water.addQuery('u_reference_4',number);
+//             water.query();
+//             if (water.next()) {
+//                 // water.status = 'engagement completed';
+//                 water.setValue('u_choice_5', 'approved');
+//                 water.update();
+//             }
+//             if (current.u_choice_8 == 'not approved') {
+//                 water.setValue('u_choice_5', 'not approved');
+//                 water.update();
+
+//             }
+
+        
+// 		var rose = new GlideRecord('x_936716_enterpris_sad_document');
+//         rose.addQuery('u_reference_1', current.sys_id);
+//         rose.query();
+//         while (rose.next()) {
+//             rose.u_choice_5 = 'Choice 2';
+//             rose.update();
+//         }
+
+
+    },
+
+    type: 'c2_sad_status'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-07 09:57:58</sys_created_on>
+        <sys_id>30db54362f786110c4c0d0ccf699b65c</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>c2_sad_status</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_30db54362f786110c4c0d0ccf699b65c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-09 05:27:43</sys_updated_on>
+    </sys_script_include>
+</record_update>

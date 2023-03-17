@@ -41,7 +41,6 @@
         <mask_use_encryption>false</mask_use_encryption>
         <name>initiator</name>
         <order>20</order>
-        <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
@@ -75,14 +74,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-05 10:12:56</sys_created_on>
         <sys_id>b029720e2f2bd1100f965aab2799b671</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Initiator</sys_name>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>item_option_new_b029720e2f2bd1100f965aab2799b671</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-07 07:27:01</sys_updated_on>
+        <sys_updated_on>2023-02-08 10:32:47</sys_updated_on>
         <table/>
         <tooltip/>
         <type>8</type>

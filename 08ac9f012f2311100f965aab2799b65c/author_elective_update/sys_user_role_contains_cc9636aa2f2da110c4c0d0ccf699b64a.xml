@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="DELETE">
+        <contains display_value="sn_templated_snip.template_snippet_admin" name="sn_templated_snip.template_snippet_admin">1250d5d5534103002b76ddeeff7b1286</contains>
+        <role display_value="x_936716_enterpris.Head of Architecture delegate" name="x_936716_enterpris.Head of Architecture delegate">937cdc662f6f15100f965aab2799b630</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-16 09:22:00</sys_created_on>
+        <sys_id>cc9636aa2f2da110c4c0d0ccf699b64a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_templated_snip.template_snippet_admin.x_936716_enterpris.Head of Architecture delegate</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_user_role_contains_cc9636aa2f2da110c4c0d0ccf699b64a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-16 09:22:00</sys_updated_on>
+    </sys_user_role_contains>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</application>
+        <file_path/>
+        <instance_id>5efa46b2dbb867007d8cf22ebf9619eb</instance_id>
+        <instance_name>dev71675</instance_name>
+        <name>sys_user_role_contains_cc9636aa2f2da110c4c0d0ccf699b64a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="sn_templated_snip.template_snippet_admin" name="sn_templated_snip.template_snippet_admin">1250d5d5534103002b76ddeeff7b1286</contains><role display_value="x_936716_enterpris.Head of Architecture delegate" name="x_936716_enterpris.Head of Architecture delegate">937cdc662f6f15100f965aab2799b630</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-03-16 09:22:00</sys_created_on><sys_id>cc9636aa2f2da110c4c0d0ccf699b64a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sn_templated_snip.template_snippet_admin.x_936716_enterpris.Head of Architecture delegate</sys_name><sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package><sys_policy/><sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope><sys_update_name>sys_user_role_contains_cc9636aa2f2da110c4c0d0ccf699b64a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-03-16 09:22:00</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+        <payload_hash>-2093966369</payload_hash>
+        <record_name>sn_templated_snip.template_snippet_admin.x_936716_enterpris.Head of Architecture delegate</record_name>
+        <reverted_from/>
+        <source>84430e5a2f296110c4c0d0ccf699b615</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-16 09:22:00</sys_created_on>
+        <sys_id>c89636aa2f2da110c4c0d0ccf699b657</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>186e9b9e87d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-16 09:22:00</sys_updated_on>
+        <type>Contained Role</type>
+        <update_guid>049636aace2da110e43f6b660412c057</update_guid>
+        <update_guid_history>049636aace2da110e43f6b660412c057:-2093966369</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-16 10:00:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role_contains">sys_user_role_contains</sys_db_object>
+        <sys_id>7fb80cb82a964e828114db092ed7e841</sys_id>
+        <sys_metadata>cc9636aa2f2da110c4c0d0ccf699b64a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_templated_snip.template_snippet_admin.x_936716_enterpris.Head of Architecture delegate</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_scope_delete display_value="">904a6f17cc7b43e283d9ef84ac8988c4</sys_scope_delete>
+        <sys_update_name>sys_user_role_contains_cc9636aa2f2da110c4c0d0ccf699b64a</sys_update_name>
+        <sys_update_version display_value="sys_user_role_contains_cc9636aa2f2da110c4c0d0ccf699b64a">c89636aa2f2da110c4c0d0ccf699b657</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-16 10:00:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

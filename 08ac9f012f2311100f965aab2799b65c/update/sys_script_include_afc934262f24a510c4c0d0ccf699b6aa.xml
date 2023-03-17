@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.add_decision</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>add_decision</name>
+        <script><![CDATA[var add_decision = Class.create();
+add_decision.prototype = {
+    mass: function() {
+//         var game = new GlideRecord('x_936716_enterpris_engagement');
+//         game.addQuery('sys_id',current.sys_id);
+//         game.query();
+        if (current.u_choice_8 == 'approved' || current.u_choice_8 == 'not approved' || current.u_choice_8 == 'Choice 3') {
+
+            var water = new GlideRecord('x_936716_enterpris_governance_items');
+            water.addQuery('sys_id', current.u_reference_2);
+            water.query();
+            if (water.next()) {
+               // water.status = 'engagement completed';
+				water.setValue('status','engagement completed');
+				gs.addInfoMessage('Engagement Completed');
+                water.update();
+            }
+
+
+        }
+
+        //         var water = new GlideRecord('x_936716_enterpris_governance_items');
+        // water.addQuery('u_reference_2', current.sys_id);
+        // water.query();
+        // while (water.next()) {
+        //     current.status = 'engagement completed';
+        //     current.update();
+        // }
+    },
+
+    type: 'add_decision'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-25 07:15:33</sys_created_on>
+        <sys_id>afc934262f24a510c4c0d0ccf699b6aa</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>add_decision</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_afc934262f24a510c4c0d0ccf699b6aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-14 08:59:39</sys_updated_on>
+    </sys_script_include>
+</record_update>

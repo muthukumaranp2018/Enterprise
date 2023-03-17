@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.asa_override_st</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>asa_override_st</name>
+        <script><![CDATA[var asa_override_st = Class.create();
+asa_override_st.prototype = {
+    asastatus: function(number) {
+        var asa = new GlideRecord('x_936716_enterpris_governance_items');
+        asa.addQuery('sys_id', number);
+        asa.query();
+        while (asa.next()) {
+            if (asa.status == "asa completed(architecturally significan" || asa.status == "asa closed(not architecturally significa") {
+                return true;
+            }
+            return false;
+        }
+    },
+    asaapprover: function(group) {
+        var we = new GlideRecord('sys_user_group');
+        we.addQuery('name', group);
+        we.query();
+        while (we.next()) {
+            if (gs.getUser().isMemberOf(we.sys_id) && gs.getUser().hasRole('x_936716_enterpris.ats_approver')) {
+                return true;
+            } else if (gs.getUser().hasRole('x_936716_enterpris.ats_reviewer') || gs.getUser().hasRole('x_936716_enterpris.super_admin')) {
+                return false;
+            }
+
+        }
+    },
+
+    type: 'asa_override_st'
+};
+
+
+
+
+//if (gs.getUser().isMemberOf(we.sys_id) && (gs.getUser().isMemberOf("Post Trade Approvers") || gs.getUser().isMemberOf("Capital Markets Approvers") || gs.getUser().isMemberOf("Data & Analytics Approvers") || gs.getUser().isMemberOf("Shared Technology Approvers") || gs.getUser().isMemberOf("Infrastructure & Cloud Approvers") || gs.getUser().isMemberOf("Security Approvers") || gs.getUser().isMemberOf("Corporate Technology Approvers")))]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 10:13:47</sys_created_on>
+        <sys_id>f74c211d2f096910c4c0d0ccf699b623</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>asa_override_st</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_f74c211d2f096910c4c0d0ccf699b623</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 10:13:47</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</application>
+        <file_path/>
+        <instance_id>5efa46b2dbb867007d8cf22ebf9619eb</instance_id>
+        <instance_name>dev71675</instance_name>
+        <name>sys_script_include_f74c211d2f096910c4c0d0ccf699b623</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_936716_enterpris.asa_override_st&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;asa_override_st&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var asa_override_st = Class.create();
+asa_override_st.prototype = {
+    asastatus: function(number) {
+        var asa = new GlideRecord('x_936716_enterpris_governance_items');
+        asa.addQuery('sys_id', number);
+        asa.query();
+        while (asa.next()) {
+            if (asa.status == "asa completed(architecturally significan" || asa.status == "asa closed(not architecturally significa") {
+                return true;
+            }
+            return false;
+        }
+    },
+    asaapprover: function(group) {
+        var we = new GlideRecord('sys_user_group');
+        we.addQuery('name', group);
+        we.query();
+        while (we.next()) {
+            if (gs.getUser().isMemberOf(we.sys_id) &amp;&amp; gs.getUser().hasRole('x_936716_enterpris.ats_approver')) {
+                return true;
+            } else if (gs.getUser().hasRole('x_936716_enterpris.ats_reviewer') || gs.getUser().hasRole('x_936716_enterpris.super_admin')) {
+                return false;
+            }
+
+        }
+    },
+
+    type: 'asa_override_st'
+};
+
+
+
+
+//if (gs.getUser().isMemberOf(we.sys_id) &amp;&amp; (gs.getUser().isMemberOf("Post Trade Approvers") || gs.getUser().isMemberOf("Capital Markets Approvers") || gs.getUser().isMemberOf("Data &amp; Analytics Approvers") || gs.getUser().isMemberOf("Shared Technology Approvers") || gs.getUser().isMemberOf("Infrastructure &amp; Cloud Approvers") || gs.getUser().isMemberOf("Security Approvers") || gs.getUser().isMemberOf("Corporate Technology Approvers")))]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-02-15 10:13:47&lt;/sys_created_on&gt;&lt;sys_id&gt;f74c211d2f096910c4c0d0ccf699b623&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;asa_override_st&lt;/sys_name&gt;&lt;sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris"&gt;08ac9f012f2311100f965aab2799b65c&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Enterprise Governance Architecture"&gt;08ac9f012f2311100f965aab2799b65c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_f74c211d2f096910c4c0d0ccf699b623&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-02-15 10:13:47&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-84931148</payload_hash>
+        <record_name>asa_override_st</record_name>
+        <reverted_from/>
+        <source>c7a818182f6c6110c4c0d0ccf699b6d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 10:13:47</sys_created_on>
+        <sys_id>374c211d2f096910c4c0d0ccf699b625</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1865490e5c00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 10:13:47</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>7f4c211d60096910bfa41ce35a9b7624</update_guid>
+        <update_guid_history>7f4c211d60096910bfa41ce35a9b7624:-84931148</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 11:37:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>9ac63aa60f67489e9734ee401fa32339</sys_id>
+        <sys_metadata>f74c211d2f096910c4c0d0ccf699b623</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>asa_override_st</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_scope_delete display_value="">904a6f17cc7b43e283d9ef84ac8988c4</sys_scope_delete>
+        <sys_update_name>sys_script_include_f74c211d2f096910c4c0d0ccf699b623</sys_update_name>
+        <sys_update_version display_value="sys_script_include_f74c211d2f096910c4c0d0ccf699b623">374c211d2f096910c4c0d0ccf699b625</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 11:37:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

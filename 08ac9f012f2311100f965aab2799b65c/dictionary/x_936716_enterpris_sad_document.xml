@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="SAD document" max_length="40" name="x_936716_enterpris_sad_document" sizeclass="200" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="sad ID" mandatory="true" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="SAD status" mandatory="true" max_length="40" name="u_choice_5" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Choice 1" sequence="0" value="Draft for Approval"/>
+                <element inactive_on_update="false" label="Draft for review" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Draft for Approval" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Draft for forum" sequence="2" value="Choice 3"/>
+                <element inactive_on_update="false" label="Approved" sequence="3" value="approved"/>
+                <element inactive_on_update="false" label="Not Approved" sequence="4" value="not approved"/>
+                <element inactive_on_update="false" label="Expired" sequence="5" value="expired"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Status Date" max_length="40" name="u_glide_date_time_7" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Created" max_length="40" name="u_glide_date_time_8" read_only="true" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true,no_sort=true,slushbucket_ref_no_expand=true" label="Division" max_length="1024" name="u_glide_list_3" reference="sys_user_group" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="4000" name="u_journal_4" type="journal"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="governance item id" max_length="32" name="u_reference_1" reference="x_936716_enterpris_governance_items" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Uploaded by" max_length="32" name="u_reference_2" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Short Description" max_length="40" name="u_string_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="255" name="u_string_full_utf8_1" type="string_full_utf8"/>
+        <index name="index">
+            <element name="u_reference_2"/>
+        </index>
+        <index name="index2">
+            <element name="u_reference_1"/>
+        </index>
+        <index name="index3">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

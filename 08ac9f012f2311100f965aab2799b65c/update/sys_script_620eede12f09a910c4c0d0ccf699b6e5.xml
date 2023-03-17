@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_936716_enterpris_engagement</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>display the email</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+
+
+    //var cab = new GlideRecord("x_936716_enterpris_engagement");
+    //cab.addQuery('u_reference_11',current.sys_id);
+    var lc = current.getValue('u_reference_11');
+    // 	cab.query();
+    // 	while(cab.next){	
+
+    var grGrpMembers = new GlideRecord('sys_user_grmember');
+    grGrpMembers.addQuery('group', lc);
+    grGrpMembers.query();
+    //var listOfUsers = [];
+    while (grGrpMembers.next()) {
+        var listOfUsers = [];
+        listOfUsers.push(grGrpMembers.user.email.toString());
+
+        //return listOfUsers;
+        listOfUsers.join(',');
+        gs.addInfoMessage('The member email id is'+listOfUsers);
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-16 05:01:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>620eede12f09a910c4c0d0ccf699b6e5</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>display the email</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_620eede12f09a910c4c0d0ccf699b6e5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-16 09:26:13</sys_updated_on>
+        <template/>
+        <when>before_display</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=620eede12f09a910c4c0d0ccf699b6e5"/>
+</record_update>

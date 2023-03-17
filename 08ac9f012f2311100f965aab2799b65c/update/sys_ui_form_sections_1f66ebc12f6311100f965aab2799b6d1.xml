@@ -80,7 +80,7 @@
             <sys_mod_count>2</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_936716_enterpris_governance_items" name="x_936716_enterpris_governance_items" sys_domain="global" view="Default view">1f66ebc12f6311100f965aab2799b6d1</sys_ui_form>
-            <sys_ui_section caption="Federated Checklist" display_value="Federated Checklist" name="x_936716_enterpris_governance_items" sys_domain="global" view="Default view">aced4bce2f6bd1100f965aab2799b613</sys_ui_section>
+            <sys_ui_section caption="federated_checklist" display_value="federated_checklist" name="x_936716_enterpris_governance_items" sys_domain="global" view="Default view">aced4bce2f6bd1100f965aab2799b613</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2022-12-06 05:57:37</sys_updated_on>
         </sys_ui_form_section>

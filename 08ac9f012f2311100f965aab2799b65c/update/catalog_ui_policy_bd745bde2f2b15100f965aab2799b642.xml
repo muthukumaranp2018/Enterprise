@@ -6,7 +6,7 @@
         <applies_sc_task>false</applies_sc_task>
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
-        <catalog_conditions>IO:dc7593c62fabd1100f965aab2799b67b=false^EQ</catalog_conditions>
+        <catalog_conditions>IO:dc7593c62fabd1100f965aab2799b67b=true^EQ</catalog_conditions>
         <catalog_item display_value="Update Governance Item">44c83a462f2bd1100f965aab2799b655</catalog_item>
         <conditions/>
         <description/>
@@ -18,12 +18,26 @@
         <on_load>true</on_load>
         <order>110</order>
         <reverse_if_false>true</reverse_if_false>
-        <run_scripts>false</run_scripts>
+        <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
 
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
 
+	var cab = new GlideAjax("x_936716_enterpris.eng_mandatory");
+	cab.addParam('sysparm_name','eng');
+	cab.addParam('sysparm_number',g_form.getValue('number'));
+	cab.getXML(callback);
+	
+	function callback(response){
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		if(answer == "false"){
+			g_form.setMandatory('engagement_group',true);
+		}
+// 		else if(ans == "true"){
+// 			g_form.setMandatory('engagement_group',false);
+// 		}
+	}
 }]]></script_true>
         <set_values/>
         <short_description>for hiding attach sad,sad dec,eng grp</short_description>
@@ -33,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bd745bde2f2b15100f965aab2799b642</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>for hiding attach sad,sad dec,eng grp</sys_name>
         <sys_overrides/>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
@@ -41,9 +55,9 @@
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>catalog_ui_policy_bd745bde2f2b15100f965aab2799b642</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-06 07:28:53</sys_updated_on>
+        <sys_updated_on>2023-02-16 16:40:10</sys_updated_on>
         <table/>
-        <ui_type>0</ui_type>
+        <ui_type>10</ui_type>
         <variable_set/>
         <view/>
     </catalog_ui_policy>

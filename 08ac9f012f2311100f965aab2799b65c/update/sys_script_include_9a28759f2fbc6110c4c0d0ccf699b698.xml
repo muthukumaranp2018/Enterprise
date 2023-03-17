@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.asa_override_st</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>asa_override_st</name>
+        <script><![CDATA[var asa_override_st = Class.create();
+asa_override_st.prototype = {
+    asastatus: function(number) {
+        var asa = new GlideRecord('x_936716_enterpris_governance_items');
+        asa.addQuery('sys_id', number);
+        asa.query();
+        while (asa.next()) {
+            if (asa.status == "asa completed(architecturally significan" || asa.status == "asa closed(not architecturally significa") {
+                return true;
+            }
+            return false;
+        }
+    },
+    asaapprover: function(group) {
+        var we = new GlideRecord('sys_user_group');
+        we.addQuery('name', group);
+        we.query();
+        while (we.next()) {
+            //             if (gs.getUser().isMemberOf(we.sys_id)&& gs.hasRole('x_936716_enterpris.ats_approver')) {
+            //                 return true;
+            // 			}
+
+            if ((gs.getUser().isMemberOf(we.sys_id) && gs.getUser().isMemberOf("Post Trade Approvers")) || (gs.getUser().isMemberOf(we.sys_id) && gs.getUser().isMemberOf("Capital Markets Approvers")) || (gs.getUser().isMemberOf(we.sys_id) && gs.getUser().isMemberOf("Data & Analytics Approvers")) || (gs.getUser().isMemberOf(we.sys_id) && gs.getUser().isMemberOf("Shared Technology Approvers")) || (gs.getUser().isMemberOf(we.sys_id) && gs.getUser().isMemberOf("Infrastructure & Cloud Approvers")) || (gs.getUser().isMemberOf(we.sys_id) && gs.getUser().isMemberOf("Security Approvers")) || (gs.getUser().isMemberOf(we.sys_id) && gs.getUser().isMemberOf("Corporate Technology Approvers"))) {
+                return true;
+            }
+            return false;            
+        }
+    },
+
+    type: 'asa_override_st'
+};
+
+
+
+
+//if (gs.getUser().isMemberOf(we.sys_id) && (gs.getUser().isMemberOf("Post Trade Approvers") || gs.getUser().isMemberOf("Capital Markets Approvers") || gs.getUser().isMemberOf("Data & Analytics Approvers") || gs.getUser().isMemberOf("Shared Technology Approvers") || gs.getUser().isMemberOf("Infrastructure & Cloud Approvers") || gs.getUser().isMemberOf("Security Approvers") || gs.getUser().isMemberOf("Corporate Technology Approvers")))]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-09 06:04:52</sys_created_on>
+        <sys_id>9a28759f2fbc6110c4c0d0ccf699b698</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>asa_override_st</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_9a28759f2fbc6110c4c0d0ccf699b698</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-16 10:50:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

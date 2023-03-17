@@ -2,7 +2,6 @@
     <sc_cat_item_producer action="INSERT_OR_UPDATE">
         <access_type>restricted</access_type>
         <active>true</active>
-        <additional_review>false</additional_review>
         <allow_edit>false</allow_edit>
         <availability>on_desktop</availability>
         <billable>false</billable>
@@ -10,7 +9,6 @@
         <category display_value="Services">109f0438c6112276003ae8ac13e7009d</category>
         <checked_out/>
         <cost>0</cost>
-        <create_universal_request>false</create_universal_request>
         <custom_cart/>
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
@@ -74,23 +72,27 @@
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
-        <script><![CDATA[var love=new GlideRecord('x_936716_enterpris_governance_items');
-love.addQuery('sys_id',producer.number);
+        <script><![CDATA[var love = new GlideRecord('x_936716_enterpris_governance_items');
+love.addQuery('sys_id', producer.number);
 love.query();
-if(love.next()){
-	love.u_choice_10=producer.u_choice_10;
-	love.u_string_14=producer.u_string_14;
-	love.u_choice_11=producer.u_choice_11;
-	love.u_reference_12=producer.u_reference_12;
-	love.u_string_1=producer.u_string_1;
-	love.u_glide_list_13=producer.u_glide_list_13;
-	love.u_string_16=producer.u_string_16;
-	love.status='submission checklist submitted';
-	love.update();
-	
-	current.setAbortAction(true);
-}]]></script>
-        <short_description/>
+if (love.next()) {
+    love.u_choice_10 = producer.u_choice_10;
+    love.u_string_14 = producer.u_string_14;
+    love.u_choice_11 = producer.u_choice_11;
+    love.u_reference_12 = producer.u_reference_12;
+    love.u_string_1 = producer.u_string_1;
+    love.u_glide_list_13 = producer.u_glide_list_13;
+    love.u_string_16 = producer.u_string_16;
+    //love.status='submission checklist submitted';
+    love.setValue('status', 'submission checklist submitted');
+	gs.addInfoMessage('Submission checklist submitted');
+    love.update();
+
+    current.setAbortAction(true);
+}
+
+producer.portal_redirect = "/sp?id=form&table=x_936716_enterpris_governance_items&sys_id=" + love.sys_id;]]></script>
+        <short_description>Submit Submission Checklist</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -98,14 +100,14 @@ if(love.next()){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-05 13:08:52</sys_created_on>
         <sys_id>e4b163c22febd1100f965aab2799b60a</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Submit Checklist</sys_name>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>sc_cat_item_producer_e4b163c22febd1100f965aab2799b60a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-15 05:14:23</sys_updated_on>
+        <sys_updated_on>2023-02-13 11:57:27</sys_updated_on>
         <table_name>x_936716_enterpris_governance_items</table_name>
         <taxonomy_topic/>
         <template/>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.dog</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>dog</name>
+        <script><![CDATA[var dog = Class.create();
+dog.prototype = {
+    abc: function(stat) {
+        var a = new GlideRecord("x_936716_enterpris_engagement");
+        a.addQuery('sys_id', stat);
+        a.addQuery('u_choice_8INnot approved,approved');
+        a.query();
+        if (a.next())
+
+        {
+            //var x = a.u_reference_2.status;
+            if (a.u_reference_2.status == 'submission checklist submitted' && gs.getUser().isMemberOf("Super user")) {
+                return true;
+            }
+			else{
+				return false;
+			}
+			
+        }
+		//return true;
+    },
+
+    type: 'dog'
+};
+
+
+
+
+
+
+
+
+
+
+// var dog = Class.create();
+// dog.prototype = {
+//     spuser: function(stc) {
+//         var q = new GlideRecord("x_936716_enterpris_governance_items");
+//         q.addQuery('status', 'submission checklist submitted');
+//         //q.addQuery('status=submission checklist submitted');
+//         q.query();
+//         while (q.next()) {
+//             var a = new GlideRecord("x_936716_enterpris_engagement");
+//             a.addQuery('u_reference_2', q.sys_id);
+//             a.query();
+//             while (a.next()) {
+//                 if ((gs.getUser().hasRole('x_936716_enterpris.super_admin') && stc == 'approved') || (gs.getUser().hasRole('x_936716_enterpris.super_admin') && stc == 'not approved')) {
+//                     return true;
+//                 }
+//                 return false;
+//             }
+//         }
+
+
+
+
+
+
+//         var sup = new GlideRecord("x_936716_enterpris_governance_items");
+// sup.addQuery('status', 'submission checklist submitted');
+// sup.query();
+// while (sup.next()) {
+//     var ad = new GlideRecord("x_936716_enterpris_engagement");
+//     ad.addQuery('sys_id', number);
+//     ad.query();
+//     if ((current.u_choice_8 == 'approved' && gs.getUser().hasRole('x_936716_enterpris.dog')) || (current.u_choice_8 == 'not approved' && gs.getUser().hasRole('x_936716_enterpris.dog'))) {
+//         return true;
+//     }
+
+//     return false;
+// }]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-10 04:33:55</sys_created_on>
+        <sys_id>635a2e672f70e110c4c0d0ccf699b6df</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>dog</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_635a2e672f70e110c4c0d0ccf699b6df</sys_update_name>
+        <sys_updated_by>abel.tuter</sys_updated_by>
+        <sys_updated_on>2023-02-10 12:30:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

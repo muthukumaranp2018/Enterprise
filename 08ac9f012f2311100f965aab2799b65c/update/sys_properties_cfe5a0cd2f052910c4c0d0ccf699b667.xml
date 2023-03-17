@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>This properties hold on ARB Group</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_936716_enterpris.arb_group</name>
+        <read_roles/>
+        <suffix>arb_group</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>abraham.lincoln</sys_created_by>
+        <sys_created_on>2023-02-14 11:18:39</sys_created_on>
+        <sys_id>cfe5a0cd2f052910c4c0d0ccf699b667</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_936716_enterpris.arb_group</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_properties_cfe5a0cd2f052910c4c0d0ccf699b667</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 08:40:43</sys_updated_on>
+        <type>string</type>
+        <value>Post Trade,Capital Markets,Data &amp; Analytics,Shared Technology,Infrastructure &amp; Cloud,Corporate Technology,Security,&#13;
+Capital Markets Approvers,Post Trade Approvers,Data &amp; Analytics Approvers,Shared Technology Approvers,Infrastructure &amp; Cloud Approvers,Corporate Technology Approvers,Security Approvers		</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=cfe5a0cd2f052910c4c0d0ccf699b667"/>
+</record_update>

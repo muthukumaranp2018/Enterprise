@@ -19,9 +19,9 @@
         <order/>
         <script><![CDATA[function onLoad() {
    //Type appropriate comment here, and begin script below
-   var vijay=top.location.href;
-var juju=new URLSearchParams(vijay).get("sysparm_grSysId");
-g_form.setValue("number",juju);
+   var rose=top.location.href;
+var lily=new URLSearchParams(rose).get("sysparm_grSysId");
+g_form.setValue("number",lily);
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -29,7 +29,7 @@ g_form.setValue("number",juju);
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f265bf232fd421100f965aab2799b6cd</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>autopopulate record onload</sys_name>
         <sys_overrides/>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
@@ -37,7 +37,7 @@ g_form.setValue("number",juju);
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>catalog_script_client_f265bf232fd421100f965aab2799b6cd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-01-16 13:27:42</sys_updated_on>
+        <sys_updated_on>2023-01-19 05:00:37</sys_updated_on>
         <table/>
         <type>onLoad</type>
         <ui_type>10</ui_type>

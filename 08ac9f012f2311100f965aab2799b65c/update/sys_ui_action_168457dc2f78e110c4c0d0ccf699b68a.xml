@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>complete_phase2</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.status =="submission checklist submitted" &amp;&amp;new  complete_phase_hs().club(current.sys_id) &amp;&amp; gs.getUser().isMemberOf('Super user');</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Complete Phase</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[// new c2_sad_status().sad_status(current.sys_id);  // this is script include for c2_sad_status();
+
+var gr = new GlideRecord("x_936716_enterpris_engagement");
+gr.addQuery('u_reference_2', current.sys_id);
+gr.query(); //start
+
+var k = gr.getRowCount();
+var kl = 0,
+    kv = 0;
+var a = new GlideRecord("x_936716_enterpris_engagement");
+a.addQuery('u_reference_2', current.sys_id);
+a.addQuery('u_choice_8=approved');
+a.query();
+while (a.next()) {
+    //if (a.u_choice_8 == 'approved' || a.u_choice_8 == 'not approved') {
+
+    kl++;
+    // }
+}
+var b = new GlideRecord("x_936716_enterpris_engagement");
+b.addQuery('u_reference_2', current.sys_id);
+b.addQuery('u_choice_8=not approved');
+b.query();
+while (b.next()) {
+    //if (a.u_choice_8 == 'approved' || a.u_choice_8 == 'not approved') {
+    kv++;
+    // }
+
+}
+
+
+if (k == kl) {
+    current.setValue("status", "completed(approved in forum)");
+    gs.addInfoMessage(' Completed (approved in forum)');
+    current.update();
+} else if (k == kv) {
+    current.setValue("status", "completed(not approved in forum)");
+	gs.addInfoMessage('Completed (not approved in form)');
+    current.update();
+}
+
+
+
+
+
+
+
+
+
+// Sad Documents 
+
+
+var gr1 = new GlideRecord("x_936716_enterpris_sad_document");
+gr1.addQuery("u_reference_1", current.sys_id);
+gr1.addQuery("u_choice_5!=expired");
+gr1.query();
+if (gr1.next()) {
+   var sys_od = gr1.sys_id; 
+}
+
+var e = new GlideRecord("x_936716_enterpris_engagement");
+e.addQuery('u_reference_2', current.sys_id);
+e.addQuery('u_choice_8!=approved');
+e.query();
+if(!e.next()){
+	var sd = new GlideRecord("x_936716_enterpris_sad_document");
+sd.addQuery("sys_id",sys_od);
+sd.query();
+if(sd.next()){
+	sd.u_choice_5="approved";
+	sd.update();
+	
+}
+}
+
+var re = new GlideRecord("x_936716_enterpris_engagement");
+re.addQuery('u_reference_2', current.sys_id);
+re.addQuery('u_choice_8!=not approved');
+re.query();
+if(!re.next()){
+	var sde = new GlideRecord("x_936716_enterpris_sad_document");
+sde.addQuery("sys_id",sys_od);
+sde.query();
+if(sde.next()){
+	sde.u_choice_5="not approved";
+	sde.update();
+	
+}
+}
+
+
+
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-31 05:00:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>168457dc2f78e110c4c0d0ccf699b68a</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Complete Phase</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_ui_action_168457dc2f78e110c4c0d0ccf699b68a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-13 09:34:16</sys_updated_on>
+        <table>x_936716_enterpris_governance_items</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

@@ -2,7 +2,6 @@
     <sc_cat_item_producer action="INSERT_OR_UPDATE">
         <access_type>restricted</access_type>
         <active>true</active>
-        <additional_review>false</additional_review>
         <allow_edit>false</allow_edit>
         <availability>on_desktop</availability>
         <billable>false</billable>
@@ -10,7 +9,6 @@
         <category display_value="Services">109f0438c6112276003ae8ac13e7009d</category>
         <checked_out/>
         <cost>0</cost>
-        <create_universal_request>false</create_universal_request>
         <custom_cart/>
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
@@ -90,7 +88,7 @@ ca.insert();
 current.governance_request_id = ca.number;
 
 producer.portal_redirect="/sp?id=form&table=x_936716_enterpris_governance_items&sys_id="+current.sys_id;]]></script>
-        <short_description/>
+        <short_description>ASA Submitted</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -98,14 +96,14 @@ producer.portal_redirect="/sp?id=form&table=x_936716_enterpris_governance_items&
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-05 06:34:27</sys_created_on>
         <sys_id>a3a64aca2f67d1100f965aab2799b605</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Governance Request Form</sys_name>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>sc_cat_item_producer_a3a64aca2f67d1100f965aab2799b605</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-01-16 05:09:22</sys_updated_on>
+        <sys_updated_on>2023-02-07 13:42:00</sys_updated_on>
         <table_name>x_936716_enterpris_governance_items</table_name>
         <taxonomy_topic/>
         <template/>

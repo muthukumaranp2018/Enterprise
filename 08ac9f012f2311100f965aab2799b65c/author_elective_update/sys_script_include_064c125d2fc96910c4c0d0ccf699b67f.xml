@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.eng_mendatory</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>eng_mendatory</name>
+        <script/>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 13:43:55</sys_created_on>
+        <sys_id>064c125d2fc96910c4c0d0ccf699b67f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>eng_mendatory</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_064c125d2fc96910c4c0d0ccf699b67f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 16:28:15</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</application>
+        <file_path/>
+        <instance_id>5efa46b2dbb867007d8cf22ebf9619eb</instance_id>
+        <instance_name>dev71675</instance_name>
+        <name>sys_script_include_064c125d2fc96910c4c0d0ccf699b67f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include"><sys_script_include action="INSERT_OR_UPDATE"><access>package_private</access><active>true</active><api_name>x_936716_enterpris.eng_mendatory</api_name><caller_access/><client_callable>true</client_callable><description/><name>eng_mendatory</name><script/><sys_class_name>sys_script_include</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-15 13:43:55</sys_created_on><sys_id>064c125d2fc96910c4c0d0ccf699b67f</sys_id><sys_mod_count>2</sys_mod_count><sys_name>eng_mendatory</sys_name><sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package><sys_policy>read</sys_policy><sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope><sys_update_name>sys_script_include_064c125d2fc96910c4c0d0ccf699b67f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-02-15 16:28:15</sys_updated_on></sys_script_include></record_update>]]></payload>
+        <payload_hash>-1257958385</payload_hash>
+        <record_name>eng_mendatory</record_name>
+        <reverted_from/>
+        <source>c7a818182f6c6110c4c0d0ccf699b6d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 16:28:15</sys_created_on>
+        <sys_id>0d024b912f8d6910c4c0d0ccf699b65c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18655e7baf20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 16:28:15</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>45024b91188d6910d9f3ceaaf9db965c</update_guid>
+        <update_guid_history>45024b91188d6910d9f3ceaaf9db965c:-1257958385,7ee1cf9dfa4d69100b587202d1c43725:1974488443,ca6c125d71c969102590ef37b662dc83:1008437992</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 16:28:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>0d329f9fa17e4b94991eea36474d0410</sys_id>
+        <sys_metadata>064c125d2fc96910c4c0d0ccf699b67f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>eng_mendatory</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_scope_delete display_value="">904a6f17cc7b43e283d9ef84ac8988c4</sys_scope_delete>
+        <sys_update_name>sys_script_include_064c125d2fc96910c4c0d0ccf699b67f</sys_update_name>
+        <sys_update_version display_value="sys_script_include_064c125d2fc96910c4c0d0ccf699b67f">0d024b912f8d6910c4c0d0ccf699b65c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 16:28:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

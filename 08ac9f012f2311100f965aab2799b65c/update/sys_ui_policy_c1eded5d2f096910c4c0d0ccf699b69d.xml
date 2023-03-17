@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+    g_form.setReadOnly('number', true);
+    g_form.setReadOnly('u_reference_2', true);
+    g_form.setReadOnly('u_reference_3', true);
+    g_form.setReadOnly('u_reference_4', true);
+    g_form.setReadOnly('u_reference_5', true);
+    g_form.setReadOnly('u_glide_list_6', true);
+    g_form.setReadOnly('u_glide_list_7', true);
+    g_form.setReadOnly('to_be_approved_by', true);
+    g_form.setReadOnly('approved_by', true);
+    g_form.setReadOnly('u_choice_8', true);
+    g_form.setReadOnly('u_choice_9', true);
+    g_form.setReadOnly('u_glide_date_time_10', true);
+    g_form.setReadOnly('u_reference_11', true);
+    g_form.setReadOnly('u_reference_1', true);
+    g_form.setReadOnly('u_string_2', true);
+    g_form.setReadOnly('type', true);
+    g_form.setReadOnly('u_journal_4', true);
+    //g_form.setReadOnly('number',true);
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Read only Except comment</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 10:20:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c1eded5d2f096910c4c0d0ccf699b69d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Read only Except comment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_ui_policy_c1eded5d2f096910c4c0d0ccf699b69d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-16 09:30:07</sys_updated_on>
+        <table>x_936716_enterpris_engagement</table>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

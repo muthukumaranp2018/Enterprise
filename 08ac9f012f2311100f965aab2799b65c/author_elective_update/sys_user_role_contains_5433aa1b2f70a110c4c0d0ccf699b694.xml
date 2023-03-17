@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="DELETE">
+        <contains display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</contains>
+        <role display_value="x_936716_enterpris.ats_approver" name="x_936716_enterpris.ats_approver">66dcd3c92f2311100f965aab2799b6bb</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-09 09:05:43</sys_created_on>
+        <sys_id>5433aa1b2f70a110c4c0d0ccf699b694</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>snc_internal.x_936716_enterpris.ats_approver</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_user_role_contains_5433aa1b2f70a110c4c0d0ccf699b694</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-09 09:05:43</sys_updated_on>
+    </sys_user_role_contains>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</application>
+        <file_path/>
+        <instance_id>5efa46b2dbb867007d8cf22ebf9619eb</instance_id>
+        <instance_name>dev71675</instance_name>
+        <name>sys_user_role_contains_5433aa1b2f70a110c4c0d0ccf699b694</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</contains><role display_value="x_936716_enterpris.ats_approver" name="x_936716_enterpris.ats_approver">66dcd3c92f2311100f965aab2799b6bb</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-09 09:05:43</sys_created_on><sys_id>5433aa1b2f70a110c4c0d0ccf699b694</sys_id><sys_mod_count>0</sys_mod_count><sys_name>snc_internal.x_936716_enterpris.ats_approver</sys_name><sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package><sys_policy/><sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope><sys_update_name>sys_user_role_contains_5433aa1b2f70a110c4c0d0ccf699b694</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-02-09 09:05:43</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+        <payload_hash>-399295612</payload_hash>
+        <record_name>snc_internal.x_936716_enterpris.ats_approver</record_name>
+        <reverted_from/>
+        <source>c7a818182f6c6110c4c0d0ccf699b6d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-09 09:05:44</sys_created_on>
+        <sys_id>6033a65b2f70a110c4c0d0ccf699b662</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>186356c70f60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-09 09:05:44</sys_updated_on>
+        <type>Contained Role</type>
+        <update_guid>a833a65bcf70a11031048100eb979c61</update_guid>
+        <update_guid_history>a833a65bcf70a11031048100eb979c61:-399295612</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-09 09:09:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role_contains">sys_user_role_contains</sys_db_object>
+        <sys_id>270372ec09c542898f566853b8af6ff9</sys_id>
+        <sys_metadata>5433aa1b2f70a110c4c0d0ccf699b694</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>snc_internal.x_936716_enterpris.ats_approver</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_scope_delete display_value="">904a6f17cc7b43e283d9ef84ac8988c4</sys_scope_delete>
+        <sys_update_name>sys_user_role_contains_5433aa1b2f70a110c4c0d0ccf699b694</sys_update_name>
+        <sys_update_version display_value="sys_user_role_contains_5433aa1b2f70a110c4c0d0ccf699b694">6033a65b2f70a110c4c0d0ccf699b662</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-09 09:09:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

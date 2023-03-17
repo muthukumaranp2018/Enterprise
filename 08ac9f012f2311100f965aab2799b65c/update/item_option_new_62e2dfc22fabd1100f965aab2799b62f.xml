@@ -41,7 +41,6 @@
         <mask_use_encryption>false</mask_use_encryption>
         <name>u_string_full_utf8_3</name>
         <order>160</order>
-        <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>

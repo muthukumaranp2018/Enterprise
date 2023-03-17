@@ -2,7 +2,6 @@
     <sc_cat_item_producer action="INSERT_OR_UPDATE">
         <access_type>restricted</access_type>
         <active>true</active>
-        <additional_review>false</additional_review>
         <allow_edit>false</allow_edit>
         <availability>on_desktop</availability>
         <billable>false</billable>
@@ -10,7 +9,6 @@
         <category display_value="Services">109f0438c6112276003ae8ac13e7009d</category>
         <checked_out/>
         <cost>0</cost>
-        <create_universal_request>false</create_universal_request>
         <custom_cart/>
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
@@ -82,19 +80,23 @@ if (rose.next()) {
     rose.u_choice_18= producer.u_choice_18;
     rose.u_string_8 = producer.u_string_8;
     rose.update();
-    
+
 }
 
 var x = new GlideRecord('x_936716_enterpris_governance_items');
 x.addQuery('sys_id', producer.number);
-x.query();
-if (x.next()) {
-    x.u_choice_18 = producer.u_choice_18;
+ x.u_choice_18 = producer.u_choice_18;
     x.u_choice_9 = producer.u_choice_9;
     x.u_string_8 = producer.u_string_8;
+x.query();
+if (x.next()) {
+//     x.u_choice_18 = producer.u_choice_18;
+//     x.u_choice_9 = producer.u_choice_9;
+//     x.u_string_8 = producer.u_string_8;
 	if(producer.u_choice_18 == "as_to_not_as"){
 		x.setValue('u_choice_1', 'non architecturally significant');
 		x.setValue('status', 'asa closed(not architecturally significant)');
+		gs.addInfoMessage('ASA Non Architecturally significant');
 		
 		
 		
@@ -102,13 +104,14 @@ if (x.next()) {
 	else if(producer.u_choice_18 == "not_as_to_as"){
 		x.setValue('u_choice_1', 'architecturally significant');
 		x.setValue('status', 'asa completed(architecturally significant)');
+      gs.addInfoMessage('ASA  Architecturally significant');
 		x.u_reference_2=gs.getUserID();
 		
 	}
 	else if(producer.u_choice_18 == "no override"){
 		x.setValue('');
 	}
-	gs.eventQueue('x_936716_enterpris_governance_items.asa.override',x);
+	//gs.eventQueue('x_936716_enterpris_governance_items.asa.override',x);
 	var gdt=new GlideDateTime();
 	var date=gdt.getDisplayValue();
 	x.u_glide_date_3=date;
@@ -116,10 +119,10 @@ if (x.next()) {
 
     gs.addInfoMessage("The record has now been updated");
 }
-current.setAbortAction(true);
-
+//current.setAbortAction(true);
+producer.portal_redirect="/sp?id=form&table=x_936716_enterpris_governance_items&sys_id="+rose.sys_id;
 ]]></script>
-        <short_description/>
+        <short_description>Update ASA Override</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -127,14 +130,14 @@ current.setAbortAction(true);
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-05 12:48:05</sys_created_on>
         <sys_id>120d574e2fabd1100f965aab2799b6b0</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name>Update ASA Override</sys_name>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>sc_cat_item_producer_120d574e2fabd1100f965aab2799b6b0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-15 07:13:54</sys_updated_on>
+        <sys_updated_on>2023-02-14 08:54:33</sys_updated_on>
         <table_name>x_936716_enterpris_governance_items</table_name>
         <taxonomy_topic/>
         <template/>

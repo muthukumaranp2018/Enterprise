@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_936716_enterpris_engagement</collection>
+        <condition>gs.getUser().isMemberOf(current.getDisplayValue('u_reference_11'));</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_936716_enterpris_engagement">u_choice_8=approved^ORu_choice_8=not approved^ORu_choice_8=Choice 3^EQ<item display_value="Approved" endquery="false" field="u_choice_8" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+            <item display_value="Not Approved" endquery="false" field="u_choice_8" goto="false" newquery="false" operator="=" or="true" value="not approved"/>
+            <item display_value="Refer to Forum" endquery="false" field="u_choice_8" goto="false" newquery="false" operator="=" or="true" value="Choice 3"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Approved by</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    var checkT = gs.getUserID().toString();
+    var to_BR_By = current.to_be_approved_by.toString();
+    var rb = current.approved_by.toString();
+
+    var tbb_arr = to_BR_By.split(",");
+    var rb_arr = rb.split(",");
+
+    if (rb_arr.indexOf(checkT) == -1) {
+        rb_arr.push(checkT);
+    }
+
+    var po = rb_arr.join(",");
+    current.approved_by = po;
+
+    var index = tbb_arr.indexOf(checkT);
+
+    tbb_arr.splice(index, 1);
+
+    var ko = tbb_arr.join(",");
+    current.to_be_approved_by = ko;
+    current.update();
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-13 09:08:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c219876c2fcda510c4c0d0ccf699b69a</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Approved by</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_c219876c2fcda510c4c0d0ccf699b69a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-14 05:05:28</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=c219876c2fcda510c4c0d0ccf699b69a"/>
+</record_update>

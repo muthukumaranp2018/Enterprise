@@ -38,23 +38,39 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
     // Add your code here
-    if (current.u_choice_5 != '' && current.u_choice_6 != '' && current.u_choice_7 !== '' && current.u_choice_8 !== '' && current.u_choice_12 !== '' && current.u_choice_13 !== '' && current.u_choice_14 !== '' && current.u_choice_15 !== '') {
+    if (current.u_choice_5 != '' && current.u_choice_6 != '' && current.u_choice_7 != '' && current.u_choice_8 != '' && current.u_choice_12 != '' && current.u_choice_13 != '' && current.u_choice_14 != '' && current.u_choice_15 != '') {
         if (current.u_choice_5 == 'yes') {
             //             current.u_choice_1 = 'non architecturally significant';
             //             current.status = 'asa closed(not architecturally significant)';
             current.setValue('u_choice_1', 'non architecturally significant');
-            current.setValue('status', 'ASA Closed(Not Architecturally significant)');
+            current.setValue('status', 'asa closed(not architecturally significant)');
+			gs.addInfoMessage('This is  ASA Result non architecturally Significant');
 
-        } else if (current.u_choice_5 != 'no') {
-            if ((current.u_choice_6 != 'no' && current.u_choice_7 !== 'no' && current.u_choice_8 !== 'no' && current.u_choice_12 !== 'no' && current.u_choice_13 !== 'no' && current.u_choice_14 !== 'no' && current.u_choice_15 !== 'no')) {
-                current.u_choice_1 = 'non architecturally significant';
-                current.status = 'asa closed(not architecturally significant)';
+        } else if (current.u_choice_5 == 'no') {
+            if ((current.u_choice_6 == 'no' && current.u_choice_7 == 'no' && current.u_choice_8 == 'no' && current.u_choice_12 == 'no' && current.u_choice_13 == 'no' && current.u_choice_14 == 'no' && current.u_choice_15 == 'no')) {
+                //                 current.u_choice_1 = 'non architecturally significant';
+                //                 current.status = 'asa closed(not architecturally significant)';
+                current.setValue('u_choice_1', 'non architecturally significant');
+                current.setValue('status', 'asa closed(not architecturally significant)');
+				gs.addInfoMessage('This is  ASA Result non architecturally Significant');
+
+            } else if ((current.u_choice_6 == 'yes' || current.u_choice_7 == 'yes' || current.u_choice_8 == 'yes' || current.u_choice_12 == 'yes' || current.u_choice_13 == 'yes' || current.u_choice_14 == 'yes' || current.u_choice_15 == 'yes')) {
+                //             current.u_choice_1 = 'architecturally significant';
+                //             current.status = 'asa completed(architecturally significant)';
+                current.setValue('u_choice_1', 'architecturally significant');
+                current.setValue('status', 'asa completed(architecturally significant)');
+				gs.addInfoMessage('This is  ASA Result  architecturally Significant');
+
+
             }
-        } else if ((current.u_choice_6 = 'yes' && current.u_choice_7 == 'yes' && current.u_choice_8 == 'yes' && current.u_choice_12 == 'yes' && current.u_choice_13 == 'yes' && current.u_choice_14 == 'yes' && current.u_choice_15 == 'yes')) {
-            current.u_choice_1 = 'architecturally significant';
-            current.status = 'asa completed(architecturally significant)';
         }
     }
+    current.u_reference_2 = gs.getUserID();
+    var mass = new GlideDateTime();
+    var date = mass.getDisplayValue();
+    current.u_glide_date_3 = date;
+    current.status_date = date;
+
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -63,7 +79,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f4ccbaab2fd021100f965aab2799b656</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>ASA result</sys_name>
         <sys_overrides/>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
@@ -71,7 +87,7 @@
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>sys_script_f4ccbaab2fd021100f965aab2799b656</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-01-16 10:09:11</sys_updated_on>
+        <sys_updated_on>2023-02-08 05:48:27</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

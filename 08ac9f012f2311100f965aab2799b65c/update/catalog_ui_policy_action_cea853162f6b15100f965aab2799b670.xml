@@ -5,24 +5,24 @@
         <cleared>false</cleared>
         <disabled>ignore</disabled>
         <field/>
-        <mandatory>false</mandatory>
+        <mandatory>ignore</mandatory>
         <order>300</order>
         <sys_class_name>catalog_ui_policy_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-06 07:07:19</sys_created_on>
         <sys_id>cea853162f6b15100f965aab2799b670</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>engagement_group</sys_name>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>catalog_ui_policy_action_cea853162f6b15100f965aab2799b670</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-06 07:07:19</sys_updated_on>
+        <sys_updated_on>2023-02-16 13:54:32</sys_updated_on>
         <table/>
-        <ui_policy display_value="for hiding some fields">bd745bde2f2b15100f965aab2799b642</ui_policy>
+        <ui_policy display_value="for hiding attach sad,sad dec,eng grp">bd745bde2f2b15100f965aab2799b642</ui_policy>
         <variable>engagement_group</variable>
         <variable_set/>
-        <visible>false</visible>
+        <visible>true</visible>
     </catalog_ui_policy_action>
 </record_update>

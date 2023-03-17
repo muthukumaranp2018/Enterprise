@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.sp_active</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>sp_active</name>
+        <script><![CDATA[var sp_active = Class.create();
+sp_active.prototype = {
+
+    spuser: function(sta) {
+        var q = new GlideRecord("x_936716_enterpris_governance_items");
+        q.addQuery('status', 'submission checklist submitted');
+        q.query();
+        while (q.next()) {
+            var a = new GlideRecord("x_936716_enterpris_engagement");
+            a.addQuery('u_reference_2', q.sys_id);
+            a.query();
+            while (a.next()) {
+                if (sta == 'approved' && gs.getUser().hasRole('x_936716_enterpris.super_admin') || sta == 'not approved' && gs.getUser().hasRole('x_936716_enterpris.super_admin')) {
+                    return true;
+                }
+                //return false;
+            }
+        }
+
+
+    },
+
+    type: 'sp_active'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-10 06:39:33</sys_created_on>
+        <sys_id>0d2b8be72ff0e110c4c0d0ccf699b688</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>sp_active</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_0d2b8be72ff0e110c4c0d0ccf699b688</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-10 07:00:51</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</application>
+        <file_path/>
+        <instance_id>5efa46b2dbb867007d8cf22ebf9619eb</instance_id>
+        <instance_name>dev71675</instance_name>
+        <name>sys_script_include_0d2b8be72ff0e110c4c0d0ccf699b688</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_936716_enterpris.sp_active&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;sp_active&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var sp_active = Class.create();
+sp_active.prototype = {
+
+    spuser: function(sta) {
+        var q = new GlideRecord("x_936716_enterpris_governance_items");
+        q.addQuery('status', 'submission checklist submitted');
+        q.query();
+        while (q.next()) {
+            var a = new GlideRecord("x_936716_enterpris_engagement");
+            a.addQuery('u_reference_2', q.sys_id);
+            a.query();
+            while (a.next()) {
+                if (sta == 'approved' &amp;&amp; gs.getUser().hasRole('x_936716_enterpris.super_admin') || sta == 'not approved' &amp;&amp; gs.getUser().hasRole('x_936716_enterpris.super_admin')) {
+                    return true;
+                }
+                //return false;
+            }
+        }
+
+
+    },
+
+    type: 'sp_active'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-02-10 06:39:33&lt;/sys_created_on&gt;&lt;sys_id&gt;0d2b8be72ff0e110c4c0d0ccf699b688&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;sp_active&lt;/sys_name&gt;&lt;sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris"&gt;08ac9f012f2311100f965aab2799b65c&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Enterprise Governance Architecture"&gt;08ac9f012f2311100f965aab2799b65c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_0d2b8be72ff0e110c4c0d0ccf699b688&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-02-10 07:00:51&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1433215477</payload_hash>
+        <record_name>sp_active</record_name>
+        <reverted_from/>
+        <source>c7a818182f6c6110c4c0d0ccf699b6d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-10 07:00:51</sys_created_on>
+        <sys_id>78301f2f2ff0e110c4c0d0ccf699b6dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1863a2076130000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-10 07:00:51</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>b0301f2fe1f0e1104e7293677d6cbbdd</update_guid>
+        <update_guid_history>b0301f2fe1f0e1104e7293677d6cbbdd:1433215477,3b6d03aba7f0e1101ed399844a85dc21:1064611541,5afc03ab48f0e11049b65281cfef7d6a:112600367,828c8b6bc0f0e110a0b5d22a4f179523:-1186418313,b05bc7e7d6f0e11018f4c47c3139dede:-1381732401</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-10 07:05:08</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>88538a85a9054a608a077c6acf5e8400</sys_id>
+        <sys_metadata>0d2b8be72ff0e110c4c0d0ccf699b688</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sp_active</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_scope_delete display_value="">904a6f17cc7b43e283d9ef84ac8988c4</sys_scope_delete>
+        <sys_update_name>sys_script_include_0d2b8be72ff0e110c4c0d0ccf699b688</sys_update_name>
+        <sys_update_version display_value="sys_script_include_0d2b8be72ff0e110c4c0d0ccf699b688">78301f2f2ff0e110c4c0d0ccf699b6dd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-10 07:05:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

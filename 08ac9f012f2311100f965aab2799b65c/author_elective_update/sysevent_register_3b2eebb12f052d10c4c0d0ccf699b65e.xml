@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="DELETE">
+        <caller_access/>
+        <description>This comments change email</description>
+        <event_name>x_936716_enterpris.Comments email</event_name>
+        <fired_by/>
+        <queue/>
+        <suffix>Comments email</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-17 08:59:27</sys_created_on>
+        <sys_id>3b2eebb12f052d10c4c0d0ccf699b65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_936716_enterpris.Comments email</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sysevent_register_3b2eebb12f052d10c4c0d0ccf699b65e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-17 08:59:27</sys_updated_on>
+        <table>x_936716_enterpris_engagement</table>
+    </sysevent_register>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</application>
+        <file_path/>
+        <instance_id>5efa46b2dbb867007d8cf22ebf9619eb</instance_id>
+        <instance_name>dev71675</instance_name>
+        <name>sysevent_register_3b2eebb12f052d10c4c0d0ccf699b65e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register"><sysevent_register action="INSERT_OR_UPDATE"><caller_access/><description>This comments change email</description><event_name>x_936716_enterpris.Comments email</event_name><fired_by/><queue/><suffix>Comments email</suffix><sys_class_name>sysevent_register</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-17 08:59:27</sys_created_on><sys_id>3b2eebb12f052d10c4c0d0ccf699b65e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_936716_enterpris.Comments email</sys_name><sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package><sys_policy/><sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope><sys_update_name>sysevent_register_3b2eebb12f052d10c4c0d0ccf699b65e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-02-17 08:59:27</sys_updated_on><table>x_936716_enterpris_engagement</table></sysevent_register></record_update>]]></payload>
+        <payload_hash>1850925746</payload_hash>
+        <record_name>x_936716_enterpris.Comments email</record_name>
+        <reverted_from/>
+        <source>c7a818182f6c6110c4c0d0ccf699b6d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-17 08:59:27</sys_created_on>
+        <sys_id>ea7eab352f052d10c4c0d0ccf699b624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1865e9990640000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-17 08:59:27</sys_updated_on>
+        <type>Event Registration</type>
+        <update_guid>267eab355d052d102a335bc9ee9c9c24</update_guid>
+        <update_guid_history>267eab355d052d102a335bc9ee9c9c24:1850925746</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-17 09:14:31</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_register">sysevent_register</sys_db_object>
+        <sys_id>187596433d9340d89d9016217e808240</sys_id>
+        <sys_metadata>3b2eebb12f052d10c4c0d0ccf699b65e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_936716_enterpris.Comments email</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_parent display_value="Engagement">ed4e974d2f2311100f965aab2799b668</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_scope_delete display_value="">904a6f17cc7b43e283d9ef84ac8988c4</sys_scope_delete>
+        <sys_update_name>sysevent_register_3b2eebb12f052d10c4c0d0ccf699b65e</sys_update_name>
+        <sys_update_version display_value="sysevent_register_3b2eebb12f052d10c4c0d0ccf699b65e">ea7eab352f052d10c4c0d0ccf699b624</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-17 09:14:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

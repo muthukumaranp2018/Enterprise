@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_936716_enterpris.Auto_populate_ar_group</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>Auto_populate_ar_group</name>
+        <script><![CDATA[var Auto_populate_ar_group = Class.create();
+Auto_populate_ar_group.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getGroupMember: function() {
+        var groupName = this.getParameter('sysparm_groupName');
+        var members = [];
+        var gr = new GlideRecord('sys_user_grmember');
+        gr.addQuery('group', groupName);
+        gr.query();
+        while (gr.next()) {
+            members.push(gr.user.sys_id);
+        }
+        return members.toString();
+
+    },
+
+
+    type: 'Auto_populate_ar_group'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-01 08:59:58</sys_created_on>
+        <sys_id>f8f415782f306510c4c0d0ccf699b65f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Auto_populate_ar_group</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_update_name>sys_script_include_f8f415782f306510c4c0d0ccf699b65f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-01 09:13:14</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</application>
+        <file_path/>
+        <instance_id>5efa46b2dbb867007d8cf22ebf9619eb</instance_id>
+        <instance_name>dev71675</instance_name>
+        <name>sys_script_include_f8f415782f306510c4c0d0ccf699b65f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_936716_enterpris.Auto_populate_ar_group&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;Auto_populate_ar_group&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var Auto_populate_ar_group = Class.create();
+Auto_populate_ar_group.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getGroupMember: function() {
+        var groupName = this.getParameter('sysparm_groupName');
+        var members = [];
+        var gr = new GlideRecord('sys_user_grmember');
+        gr.addQuery('group', groupName);
+        gr.query();
+        while (gr.next()) {
+            members.push(gr.user.sys_id);
+        }
+        return members.toString();
+
+    },
+
+
+    type: 'Auto_populate_ar_group'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-02-01 08:59:58&lt;/sys_created_on&gt;&lt;sys_id&gt;f8f415782f306510c4c0d0ccf699b65f&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Auto_populate_ar_group&lt;/sys_name&gt;&lt;sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris"&gt;08ac9f012f2311100f965aab2799b65c&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Enterprise Governance Architecture"&gt;08ac9f012f2311100f965aab2799b65c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_f8f415782f306510c4c0d0ccf699b65f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-02-01 09:13:14&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1188042000</payload_hash>
+        <record_name>Auto_populate_ar_group</record_name>
+        <reverted_from/>
+        <source>c7a818182f6c6110c4c0d0ccf699b6d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-01 09:13:14</sys_created_on>
+        <sys_id>e038113c2f306510c4c0d0ccf699b646</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1860c406ea30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-01 09:13:14</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>2c38113c633065105ebf474f0643b145</update_guid>
+        <update_guid_history>2c38113c633065105ebf474f0643b145:-1188042000,71e591b8dd30651092cb326bf7a19aff:-1358144627,422595383a306510e435af51dc770d27:1109587656</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-01 09:21:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>9c7ada7772bd4044b8c3713515c152a4</sys_id>
+        <sys_metadata>f8f415782f306510c4c0d0ccf699b65f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto_populate_ar_group</sys_name>
+        <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
+        <sys_scope_delete display_value="">904a6f17cc7b43e283d9ef84ac8988c4</sys_scope_delete>
+        <sys_update_name>sys_script_include_f8f415782f306510c4c0d0ccf699b65f</sys_update_name>
+        <sys_update_version display_value="sys_script_include_f8f415782f306510c4c0d0ccf699b65f">e038113c2f306510c4c0d0ccf699b646</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-01 09:21:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

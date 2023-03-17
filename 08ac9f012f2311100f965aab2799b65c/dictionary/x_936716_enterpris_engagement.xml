@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Engagement" max_length="40" name="x_936716_enterpris_engagement" sizeclass="279" type="collection">
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Approved By" max_length="1024" name="approved_by" reference="sys_user" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments(customer visible)" max_length="4000" name="commentscustomervisible" type="journal"/>
+        <element label="Invite Approval" max_length="40" name="invite_approval" type="boolean"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="approval ID" mandatory="true" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" dependent="u_reference_11" dependent_on_field="u_reference_11" label="To Be Approved By" max_length="1024" name="to_be_approved_by" reference="sys_user" type="glide_list" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Type" max_length="40" name="type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="ARB" sequence="0" value="arb"/>
+                <element inactive_on_update="false" label="CAF" sequence="1" value="caf"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Approval Group Decision" max_length="40" name="u_choice_8" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Awaiting Review" sequence="0" value="choice 1"/>
+                <element inactive_on_update="false" label="Requesting Approval" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Refer to Forum" sequence="2" value="Choice 3"/>
+                <element inactive_on_update="false" label="Not Approved" sequence="3" value="not approved"/>
+                <element inactive_on_update="false" label="Approved" sequence="4" value="approved"/>
+                <element inactive_on_update="false" label="Reviewed" sequence="5" value="choice 4"/>
+                <element inactive_on_update="false" label="Review in Progress" sequence="6" value="review in progress"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Decision Type" max_length="40" name="u_choice_9" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Non-strategic solution" sequence="0" value="non-strategic solution"/>
+                <element inactive_on_update="false" label="Non-technical requirement" sequence="1" value="non-technical requirement"/>
+                <element inactive_on_update="false" label="Engagement Outstanding" sequence="2" value="engagement outstanding"/>
+                <element inactive_on_update="false" label="No actions" sequence="3" value="no actions"/>
+                <element inactive_on_update="false" label="Pending key actions" sequence="4" value="pending key actions"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Decision Date" max_length="40" name="u_glide_date_time_10" read_only="true" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true,no_sort=true,slushbucket_ref_no_expand=true" dependent="u_reference_1" dependent_on_field="u_reference_1" label="To Be reviewed By" max_length="1024" name="u_glide_list_6" reference="sys_user" type="glide_list" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true,no_sort=true,slushbucket_ref_no_expand=true" label="Reviewed By" max_length="1024" name="u_glide_list_7" reference="sys_user" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="4000" name="u_journal_1" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments(Customer Visible)" max_length="4000" name="u_journal_3" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" label="Activities:5" max_length="4000" name="u_journal_4" type="journal"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Reviewer Group" max_length="32" name="u_reference_1" reference="sys_user_group" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Approval Group" max_length="32" name="u_reference_11" reference="sys_user_group" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Governance Item Id" max_length="32" name="u_reference_2" reference="x_936716_enterpris_governance_items" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Decision-Maker" max_length="32" name="u_reference_3" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="SAD ID" max_length="32" name="u_reference_4" reference="x_936716_enterpris_sad_document" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="SAD Submitted for Approval" max_length="32" name="u_reference_5" reference="x_936716_enterpris_sad_document" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Approval ID" max_length="40" name="u_string_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Request Title" max_length="40" name="u_string_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="comments(customer visible)" max_length="255" name="u_string_full_utf8_1" type="string_full_utf8"/>
+        <index name="index">
+            <element name="u_reference_4"/>
+        </index>
+        <index name="index2">
+            <element name="u_reference_5"/>
+        </index>
+        <index name="index3">
+            <element name="u_reference_2"/>
+        </index>
+        <index name="index4">
+            <element name="u_reference_3"/>
+        </index>
+        <index name="index5">
+            <element name="u_reference_1"/>
+        </index>
+        <index name="index6">
+            <element name="u_reference_11"/>
+        </index>
+        <index name="index7">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

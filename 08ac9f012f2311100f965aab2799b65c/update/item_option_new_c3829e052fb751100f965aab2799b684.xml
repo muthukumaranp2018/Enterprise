@@ -41,7 +41,6 @@
         <mask_use_encryption>false</mask_use_encryption>
         <name>u_string_16</name>
         <order>70</order>
-        <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
@@ -75,14 +74,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-14 15:06:00</sys_created_on>
         <sys_id>c3829e052fb751100f965aab2799b684</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Supporting Attendee email address</sys_name>
         <sys_package display_value="Enterprise Governance Architecture" source="x_936716_enterpris">08ac9f012f2311100f965aab2799b65c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Enterprise Governance Architecture">08ac9f012f2311100f965aab2799b65c</sys_scope>
         <sys_update_name>item_option_new_c3829e052fb751100f965aab2799b684</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-14 15:06:00</sys_updated_on>
+        <sys_updated_on>2023-01-27 09:19:54</sys_updated_on>
         <table/>
         <tooltip/>
         <type>6</type>
